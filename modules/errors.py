@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 class CalculatorError(Exception):
     """Base class for other exceptions"""
     pass

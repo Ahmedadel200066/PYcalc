@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from operations import Operations
 from errors import InvalidOperationError, ZeroDivisionError, NegativeSqrtError
 

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import unittest
-from ..models.operations import Operations
+from modules.operations import Operations
 
 class TestOperations(unittest.TestCase):
 

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import unittest
-from ..models.controller import CalculatorController
+from modules.controller import CalculatorController
 
 class TestCalculatorController(unittest.TestCase):
 

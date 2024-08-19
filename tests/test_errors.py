@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import unittest
-from ..models.errors import InvalidOperationError, ZeroDivisionError, NegativeSqrtError
+from modules.errors import InvalidOperationError, ZeroDivisionError, NegativeSqrtError
 
 class TestErrors(unittest.TestCase):
 
