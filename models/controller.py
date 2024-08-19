@@ -1,12 +1,19 @@
+from operations import Operations
+from errors import InvalidOperationError, ZeroDivisionError, NegativeSqrtError
+
 class CalculatorController:
     def __init__(self):
         self.history = []
 
     def calculate(self, expression):
         try:
-            # Use eval() carefully or replace with a safer alternative
+            # For simplicity, using eval, but you can map string operations to the Operations methods.
             result = eval(expression)
             return result
+        except ZeroDivisionError as e:
+            return str(e)
+        except ValueError as e:
+            return str(e)
         except Exception as e:
             return "Error"
 
