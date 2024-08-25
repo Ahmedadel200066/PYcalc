@@ -1,9 +1,28 @@
 #!/usr/bin/python3
 
-import unittest
 from modules.operations import Operations
+import unittest
+import sys
+import os
+sys.path.insert(0, os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..')))
+
 
 class TestOperations(unittest.TestCase):
+    """
+    A test class for testing the Operations class.
+
+    Methods:
+    - test_add: Test the add method of the Operations class.
+    - test_subtract: Test the subtract method of the Operations class.
+    - test_multiply: Test the multiply method of the Operations class.
+    - test_divide: Test the divide method of the Operations class.
+    - test_power: Test the power method of the Operations class.
+    - test_sqrt: Test the sqrt method of the Operations class.
+    - test_sin: Test the sin method of the Operations class.
+    - test_cos: Test the cos method of the Operations class.
+    - test_tan: Test the tan method of the Operations class.
+    """
 
     def test_add(self):
         self.assertEqual(Operations.add(1, 2), 3)
@@ -42,6 +61,7 @@ class TestOperations(unittest.TestCase):
 
     def test_tan(self):
         self.assertAlmostEqual(Operations.tan(45), 1.0, places=5)
+
 
 if __name__ == '__main__':
     unittest.main()
