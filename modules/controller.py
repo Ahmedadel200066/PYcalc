@@ -48,7 +48,7 @@ class CalculatorController:
     def calculate(self, expression):
         try:
             # For simplicity, using eval, but you can map string operations to methods.
-            result = eval(expression)
+            result = expression
             return result
         except ZeroDivisionError as e:
             return "Cannot divide by zero."
@@ -59,6 +59,7 @@ class CalculatorController:
 
     def add_to_history(self, operation):
         self.history.append(operation)
+        
 
     def get_history(self):
         return self.history

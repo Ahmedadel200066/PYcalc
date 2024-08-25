@@ -41,9 +41,9 @@ class CalculatorUI:
         if button == '=':
             result = self.controller.calculate(self.display.get())
             self.display.delete(0, tk.END)
-            self.display.insert(tk.END, result)
+            self.display.insert(tk.END, eval(result))
             # Add the operation to history
-            self.controller.add_to_history(f"{self.display.get()} = {result}")
+            self.controller.add_to_history(f"{result} = {self.display.get()}")
             self.update_history_display()
         else:
             self.display.insert(tk.END, button)
